@@ -1,0 +1,39 @@
+.carousel {
+    margin-top: 100px;
+    min-height: 700px;
+    width: 100%;
+}
+
+.carousel-choice-circle {
+    position: absolute;
+    top: 50%;
+    left: 55px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #00d2ff, #00d0ff00) 0 100% 0;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        content: '';
+        background: #00d2ff;
+    }
+}
+
+.carousel-choice-circle-item {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.carousel-choice-circle-item + .carousel-choice-circle-item  {
+    margin-top: 15px;
+}
