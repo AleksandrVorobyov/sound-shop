@@ -9,7 +9,8 @@ body {
     margin: 0;
     padding: 0;
     background: #000824;
-    overflow-x: hidden;
+    overflow: hidden;
+    user-select: none;
 }
 
 .page-bg {
@@ -33,3 +34,6 @@ body {
 main {
     overflow: hidden;
 }
+
+img { pointer-events: none; }
+

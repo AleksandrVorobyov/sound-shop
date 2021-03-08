@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="libs/animate/animate.css">
+    
     
     <!-- Useful meta tags -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,8 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="">
     
-    <title>Home</title>
-</head>
+    <title>Home</title></head>
 <body>
 
     <div class="page">
@@ -63,21 +66,89 @@
             </div>
             
             <section class="carousel">
-                <div class="carousel-shop">
-            
+                <div class="carousel-shop owl-carousel owl-theme">
+                    <div class="carousel-shop__item">
+                        <img src="./images/headphone-mini/1.png" alt="">
+                    </div>
+                    <div class="carousel-shop__item">
+                        <img src="./images/headphone-mini/2.png" alt="">
+                    </div>
+                    <div class="carousel-shop__item">
+                        <img src="./images/headphone-mini/3.png" alt="">
+                    </div>
+                    <div class="carousel-shop__item">
+                        <img src="./images/headphone-mini/4.png" alt="">
+                    </div>
+                    <div class="carousel-shop__item">
+                        <img src="./images/headphone-mini/5.png" alt="">
+                    </div>
+                    <div class="carousel-shop__item">
+                        <img src="./images/headphone-mini/6.png" alt="">
+                    </div>
+                </div>
+                <div class="carousel-shop__dots-wrap">
+                    <div class="carousel-shop__dots" id="carousel-custom-dots">
+                        <div class="owl-dots">
+                            <img src="./images/headphone-mini/1.png" alt="headphone-mini-01">
+                            <div class="owl-dots__title"><span>BLU</span><span>EDIO</span></div>
+                        </div>
+                        <div class="owl-dots">
+                            <img src="./images/headphone-mini/2.png" alt="headphone-mini-02">
+                            <div class="owl-dots__title"><span>BLU</span><span>EDIO</span></div>
+                        </div>
+                        <div class="owl-dots">
+                            <img src="./images/headphone-mini/3.png" alt="headphone-mini-03">
+                            <div class="owl-dots__title"><span>BLU</span><span>EDIO</span></div>
+                        </div>
+                        <div class="owl-dots">
+                            <img src="./images/headphone-mini/4.png" alt="headphone-mini-04">
+                            <div class="owl-dots__title"><span>BLU</span><span>EDIO</span></div>
+                        </div>
+                        <div class="owl-dots">
+                            <img src="./images/headphone-mini/5.png" alt="headphone-mini-05">
+                            <div class="owl-dots__title"><span>BLU</span><span>EDIO</span></div>
+                        </div>
+                        <div class="owl-dots">
+                            <img src="./images/headphone-mini/6.png" alt="headphone-mini-06">
+                            <div class="owl-dots__title"><span>BLU</span><span>EDIO</span></div>
+                        </div>
+                    </div>
+                    <div class="carousel-shop__nav">
+                        <button class="carousel-shop__nav-btn carousel-shop__nav-prev" id="shop-nav-prev"></button>
+                        <button class="carousel-shop__nav-btn carousel-shop__nav-next" id="shop-nav-next"></button>
+                    </div>
                 </div>
                 <div class="carousel-choice-circle">
-                    <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-item">
-                    <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-item">
-                    <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-item">
-                    <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-item">
-                    <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-item">
+                    <div class="carousel-choice-circle-item">
+                        <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-blue">
+                        <label for="choice-circle-blue" class="carousel-choice-circle-label" data-circle='#008aff'><span></span></label>
+                    </div>
+                    <div class="carousel-choice-circle-item">
+                        <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-white" checked>
+                        <label for="choice-circle-white" class="carousel-choice-circle-label" data-circle='#ffffff'><span></span></label>
+                    </div>
+                    <div class="carousel-choice-circle-item">
+                        <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-green">
+                        <label for="choice-circle-green" class="carousel-choice-circle-label" data-circle='#00fff6'><span></span></label>
+                    </div>
+                    <div class="carousel-choice-circle-item">
+                        <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-red">
+                        <label for="choice-circle-red" class="carousel-choice-circle-label" data-circle='#ff0000'><span></span></label>
+                    </div>
+                    <div class="carousel-choice-circle-item">
+                        <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-yellow">
+                        <label for="choice-circle-yellow" class="carousel-choice-circle-label" data-circle='#ffea00'><span></span></label>
+                    </div>
                 </div>
-            </section>        </main>
-        <footer></footer>
+            </section>
+        </main>
+        <footer class="footer"></footer>
     </div>
 
 
+    <script src="./libs/jquery/jQuery-3-5-1.js"></script>
+    <script src="./libs/owl-carousel/owl.carousel.min.js"></script>
     <script src="js/app.js"></script>
+
 </body>
 </html>
