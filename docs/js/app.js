@@ -104,7 +104,7 @@ eval("console.log('file 1');\r\n\n\n//# sourceURL=webpack:///./src/js/app.js?");
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const btnFavorites = document.getElementById('header-favorite');\r\n\r\nbtnFavorites.addEventListener('click', function(e) {\r\n    e.target.classList.toggle('header__navbar-favorite--on');\r\n});\r\n\r\n$(document).ready(function(){\r\n    $(\".carousel-shop\").owlCarousel({\r\n        nav: true,\r\n        dots: true,\r\n        items: 1,\r\n        animateOut: 'animate__backOutDown',\r\n        animateIn: 'animate__backInDown',\r\n        smartSpeed: 850,\r\n        margin:30,\r\n        stagePadding:30,\r\n        dotsContainer: '#carousel-custom-dots',\r\n        mouseDrag: false,\r\n        touchDrag: false,\r\n    });\r\n\r\n    $('.owl-dots').click(function () {\r\n        $('.carousel-shop').trigger('to.owl.carousel', [$(this).index(), 300]);\r\n    });\r\n\r\n    $('.carousel-shop__nav-next').click(function() {\r\n        $(\".carousel-shop\").trigger('next.owl.carousel', [2500]);\r\n    })\r\n    $('.carousel-shop__nav-prev').click(function() {\r\n        $(\".carousel-shop\").trigger('prev.owl.carousel', [2500]);\r\n    })\r\n});\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/file2.js?");
+eval("const btnFavorites = document.getElementById('header-favorite');\r\nconst btnFavoritesFooter = document.getElementById('footer-favorite');\r\n\r\nbtnFavorites.addEventListener('click', function(e) {\r\n    e.target.classList.toggle('header__navbar-favorite--on');\r\n});\r\n\r\nbtnFavoritesFooter.addEventListener('click', function(e) {\r\n    e.target.classList.toggle('header__navbar-favorite--on');\r\n});\r\n\r\n$(document).ready(function(){\r\n    $(\".carousel-shop\").owlCarousel({\r\n        nav: true,\r\n        dots: true,\r\n        items: 1,\r\n        animateOut: 'animate__backOutDown',\r\n        animateIn: 'animate__backInDown',\r\n        smartSpeed: 850,\r\n        margin:30,\r\n        stagePadding:30,\r\n        dotsContainer: '#carousel-custom-dots',\r\n        mouseDrag: false,\r\n        touchDrag: false,\r\n    });\r\n\r\n    $('.owl-dots').click(function () {\r\n        $('.carousel-shop').trigger('to.owl.carousel', [$(this).index(), 300]);\r\n    });\r\n\r\n    $('.carousel-shop__nav-next').click(function() {\r\n        $(\".carousel-shop\").trigger('next.owl.carousel', [2500]);\r\n    })\r\n    $('.carousel-shop__nav-prev').click(function() {\r\n        $(\".carousel-shop\").trigger('prev.owl.carousel', [2500]);\r\n    })\r\n});\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/file2.js?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("const btnFavorites = document.getElementById('header-favorite');\r\n\r\nbt
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! C:\\Users\\sasha\\Documents\\Web work\\sound-store\\src\\js\\app.js */\"./src/js/app.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\sasha\\Documents\\Web work\\sound-store\\src\\js\\file2.js */\"./src/js/file2.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/app.js_./src/js/file2.js?");
+eval("__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\app.js */\"./src/js/app.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\file2.js */\"./src/js/file2.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/app.js_./src/js/file2.js?");
 
 /***/ })
 

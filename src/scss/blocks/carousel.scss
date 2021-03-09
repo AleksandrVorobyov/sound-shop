@@ -10,12 +10,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
+    width: 1000px;
+    height: 1000px;
     opacity: 0.1;
     z-index: -1;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.8) 10%, rgba(0, 0, 0, 0) 35%);
+    background: radial-gradient(circle, rgba(255,255,255,1) 45%, rgba(0, 0, 0, 0) 65%);
   }
 }
 
@@ -191,6 +191,11 @@
   transition: opacity .4s ease-in-out;
   text-transform: uppercase;
   z-index: 100;
+  visibility: hidden;
+
+  * + * {
+    margin-top: 5px;
+  }
 }
 
 .carousel-shop__dots .owl-dots + .owl-dots {
@@ -220,6 +225,7 @@
 
   .owl-dots__title {
     opacity: 1;
+    visibility: visible;
   }
 }
 

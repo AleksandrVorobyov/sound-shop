@@ -9,8 +9,10 @@ body {
     margin: 0;
     padding: 0;
     background: #000824;
-    overflow: hidden;
+    overflow-x: hidden;
     user-select: none;
+    font-family: "Roboto-Regular";
+    font-weight: 400;
 }
 
 .page-bg {
@@ -21,6 +23,7 @@ body {
     transform: translateY(-50%);
     user-select: none;
     z-index: -100;
+    overflow: hidden;
 
     span {
         display: block;
@@ -32,7 +35,8 @@ body {
 }
 
 main {
-    overflow: hidden;
+    position: relative;
+    z-index: 50;
 }
 
 img { pointer-events: none; }
