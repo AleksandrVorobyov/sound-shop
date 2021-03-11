@@ -97,25 +97,58 @@ eval("console.log('file 1');\r\n\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ }),
 
-/***/ "./src/js/file2.js":
-/*!*************************!*\
-  !*** ./src/js/file2.js ***!
-  \*************************/
+/***/ "./src/js/carousel.js":
+/*!****************************!*\
+  !*** ./src/js/carousel.js ***!
+  \****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const btnFavorites = document.getElementById('header-favorite');\r\nconst btnFavoritesFooter = document.getElementById('footer-favorite');\r\n\r\nbtnFavorites.addEventListener('click', function(e) {\r\n    e.target.classList.toggle('header__navbar-favorite--on');\r\n});\r\n\r\nbtnFavoritesFooter.addEventListener('click', function(e) {\r\n    e.target.classList.toggle('header__navbar-favorite--on');\r\n});\r\n\r\n$(document).ready(function(){\r\n    $(\".carousel-shop\").owlCarousel({\r\n        nav: true,\r\n        dots: true,\r\n        items: 1,\r\n        animateOut: 'animate__backOutDown',\r\n        animateIn: 'animate__backInDown',\r\n        smartSpeed: 850,\r\n        margin:30,\r\n        stagePadding:30,\r\n        dotsContainer: '#carousel-custom-dots',\r\n        mouseDrag: false,\r\n        touchDrag: false,\r\n    });\r\n\r\n    $('.owl-dots').click(function () {\r\n        $('.carousel-shop').trigger('to.owl.carousel', [$(this).index(), 300]);\r\n    });\r\n\r\n    $('.carousel-shop__nav-next').click(function() {\r\n        $(\".carousel-shop\").trigger('next.owl.carousel', [2500]);\r\n    })\r\n    $('.carousel-shop__nav-prev').click(function() {\r\n        $(\".carousel-shop\").trigger('prev.owl.carousel', [2500]);\r\n    })\r\n});\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/file2.js?");
+eval("$(document).ready(function(){\r\n    $(\".carousel-shop\").owlCarousel({\r\n        nav: false,\r\n        dots: true,\r\n        items: 1,\r\n        animateOut: 'animate__backOutDown',\r\n        animateIn: 'animate__backInDown',\r\n        smartSpeed: 850,\r\n        margin:30,\r\n        stagePadding:30,\r\n        dotsContainer: '#carousel-custom-dots',\r\n        mouseDrag: false,\r\n        touchDrag: false,\r\n    });\r\n\r\n    $('.owl-dots').click(function () {\r\n        $('.carousel-shop').trigger('to.owl.carousel', [$(this).index(), 300]);\r\n    });\r\n\r\n    $('.carousel-shop__nav-next').click(function() {\r\n        $(\".carousel-shop\").trigger('next.owl.carousel', [2500]);\r\n    })\r\n    $('.carousel-shop__nav-prev').click(function() {\r\n        $(\".carousel-shop\").trigger('prev.owl.carousel', [2500]);\r\n    })\r\n});\r\n\r\nconst carouselGalleryItems = document.querySelectorAll('.carousel-shop__gallery-item');\r\n\r\ncarouselGalleryItems.forEach( function(item) {\r\n    item.addEventListener('click', function(e) {\r\n        let parentBlock = e.target.closest('.carousel-shop__item');\r\n        parentBlock.querySelectorAll('.carousel-shop__gallery-item').forEach(function(item) {\r\n            item.classList.remove('carousel-shop__gallery-item--active');\r\n        });\r\n        item.classList.add('carousel-shop__gallery-item--active');\r\n        let imgClick = e.target.querySelector('img');\r\n        let imgClickSrc = imgClick.src;\r\n        let imgBig = parentBlock.querySelector('.carousel-shop__item-img');\r\n        imgBig.classList.add('animate-gallery');\r\n        let imgBigItem = parentBlock.querySelector('.carousel-shop__item-img img');\r\n        imgBigItem.src = imgClickSrc;\r\n        setTimeout(() => {\r\n            imgBig.classList.remove('animate-gallery');\r\n        }, 900);\r\n    })\r\n})\r\n\r\nconst labelCircleAll = document.querySelectorAll('[data-circle]');\r\nlabelCircleAll.forEach(function(item) {\r\n    item.addEventListener('click', function(e) {\r\n        let bif = e.target.dataset.circle;\r\n        document.querySelectorAll('.carousel-shop__title').forEach(function(item) {\r\n            item.style.color = bif;\r\n        })\r\n    })\r\n});\n\n//# sourceURL=webpack:///./src/js/carousel.js?");
+
+/***/ }),
+
+/***/ "./src/js/favorite.js":
+/*!****************************!*\
+  !*** ./src/js/favorite.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("const btnFavorites = document.getElementById('header-favorite');\r\nconst btnFavoritesFooter = document.getElementById('footer-favorite');\r\n\r\nbtnFavorites.addEventListener('click', function(e) {\r\n    e.target.classList.toggle('header__navbar-favorite--on');\r\n});\r\n\r\nbtnFavoritesFooter.addEventListener('click', function(e) {\r\n    e.target.classList.toggle('header__navbar-favorite--on');\r\n});\n\n//# sourceURL=webpack:///./src/js/favorite.js?");
+
+/***/ }),
+
+/***/ "./src/js/search-btn.js":
+/*!******************************!*\
+  !*** ./src/js/search-btn.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("const btnSearch = document.getElementById('header-search-btn');\r\nconst inputSearch = document.getElementById('navbar-search');\r\nbtnSearch.addEventListener('click', (e) => {\r\n    if (inputSearch.classList.contains('header__navbar-input--active')) {\r\n        if (inputSearch.value.length > null) {\r\n            window.location.reload();\r\n        } else {\r\n            e.preventDefault();\r\n        }\r\n    } else {\r\n        inputSearch.classList.add('header__navbar-input--active');\r\n        e.preventDefault();\r\n    }\r\n});\n\n//# sourceURL=webpack:///./src/js/search-btn.js?");
+
+/***/ }),
+
+/***/ "./src/js/sign-in.js":
+/*!***************************!*\
+  !*** ./src/js/sign-in.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("const signInLinks = document.querySelectorAll('[data-link]').forEach((item)=> {\r\n    item.addEventListener('click', toggleForm);\r\n});\r\n\r\nfunction toggleForm() {\r\n    const signInWrap = document.querySelector('.sign-in-wrap');\r\n    signInWrap.classList.toggle('active');\r\n    const signIn = document.querySelector('.sign-in');\r\n    signIn.classList.toggle('active');\r\n}\r\n\r\nconst signInBtn = document.getElementById('sign-in-btn');\r\nsignInBtn.addEventListener('click', function() {\r\n    const signIn = document.querySelector('.sign-in');\r\n    signIn.classList.add('sign-in--active');\r\n})\r\n\r\nconst signInBtnExit = document.querySelectorAll('[data-signin-exit]');\r\n\r\nsignInBtnExit.forEach((item)=> {\r\n    item.addEventListener('click', function() {\r\n        const signIn = document.querySelector('.sign-in');\r\n        signIn.classList.remove('sign-in--active');\r\n    })\r\n})\r\n\n\n//# sourceURL=webpack:///./src/js/sign-in.js?");
 
 /***/ }),
 
 /***/ 0:
-/*!***********************************************!*\
-  !*** multi ./src/js/app.js ./src/js/file2.js ***!
-  \***********************************************/
+/*!******************************************************************************************************************!*\
+  !*** multi ./src/js/app.js ./src/js/carousel.js ./src/js/favorite.js ./src/js/search-btn.js ./src/js/sign-in.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\app.js */\"./src/js/app.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\file2.js */\"./src/js/file2.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/app.js_./src/js/file2.js?");
+eval("__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\app.js */\"./src/js/app.js\");\n__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\carousel.js */\"./src/js/carousel.js\");\n__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\favorite.js */\"./src/js/favorite.js\");\n__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\search-btn.js */\"./src/js/search-btn.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\sign-in.js */\"./src/js/sign-in.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/app.js_./src/js/carousel.js_./src/js/favorite.js_./src/js/search-btn.js_./src/js/sign-in.js?");
 
 /***/ })
 

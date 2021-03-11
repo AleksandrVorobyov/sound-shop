@@ -1,6 +1,5 @@
 .carousel {
   position: relative;
-  margin-top: 100px;
   width: 100%;
   z-index: 300;
 
@@ -20,279 +19,106 @@
 }
 
 .carousel-shop {
-  height: 800px;
   z-index: 200;
 }
 
-.carousel-shop__item img {
-  height: 700px;
-  object-fit: contain;
-  filter: drop-shadow(-5px -5px 15px rgba(0, 0, 0, 0.5));
+.carousel-shop__item {
+  position: relative;
+  padding-top: 170px;
+  max-width: 650px;
+  height: 900px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 100px;
 }
 
-.carousel-choice-circle {
-  position: absolute;
-  top: 50%;
-  left: 55px;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  border-width: 3px;
-  border-style: solid;
-  border-image: linear-gradient(to bottom, #00d2ff, #00d0ff00) 0 100% 0;
-  z-index: 300;
+.carousel-shop__text {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-family: "Roboto-Thin";
+  font-size: 13px;
+  letter-spacing: 5px;
+  color: #fff;
+  z-index: 100;
 
   &::before {
     position: absolute;
-    top: 0;
+    content: '';
+    bottom: -10px;
     left: 0;
     width: 100%;
     height: 3px;
-    content: "";
-    background: #00d2ff;
+    background: linear-gradient(90deg, #00d4ef, #008aff);
   }
 }
 
-.carousel-choice-circle-label {
+.carousel-shop__title-wrap {
+  z-index: 20;
+}
+
+.carousel-shop__title {
   position: relative;
-  display: block;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  cursor: pointer;
+  display: flex;
+  font-size: 200px;
+  line-height: 200px;
+  color: #fff;
+  font-family: 'Gobold Regular';
+  text-transform: uppercase;
+  letter-spacing: -30px;
+  text-shadow: 0px 0px 15px #00000056;
+  z-index: 10;
+  transition: color .4s ease-in-out;
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: -9px;
-    left: -9px;
-    width: 52px;
-    height: 52px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    background: transparent;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out 0s;
+  span {
+    display: flex;
+  }
+
+  span:nth-child(1) {
+    z-index: -10;
+  }
+  span:nth-child(2) {
+    z-index: -11;
+  }
+  span:nth-child(3) {
+    z-index: -12;
+  }
+  span:nth-child(4) {
+    z-index: -13;
   }
 }
 
-.carousel-choice-circle-radio {
-  position: absolute;
-  left: -99999px;
-}
-
-.carousel-choice-circle-item + .carousel-choice-circle-item {
+.carousel-shop__title + .carousel-shop__title {
   margin-top: 20px;
 }
 
-.carousel-choice-circle
-  .carousel-choice-circle-item:nth-child(1)
-  .carousel-choice-circle-label {
-  background: #008aff;
-
-  &::before {
-    border: 2px solid #008aff;
-  }
-}
-
-.carousel-choice-circle
-  .carousel-choice-circle-item:nth-child(2)
-  .carousel-choice-circle-label {
-  background: #fff;
-
-  &::before {
-    border: 2px solid #fff;
-  }
-}
-
-.carousel-choice-circle
-  .carousel-choice-circle-item:nth-child(3)
-  .carousel-choice-circle-label {
-  background: #00fff6;
-
-  &::before {
-    border: 2px solid #00fff6;
-  }
-}
-
-.carousel-choice-circle
-  .carousel-choice-circle-item:nth-child(4)
-  .carousel-choice-circle-label {
-  background: #ff0000;
-
-  &::before {
-    border: 2px solid #ff0000;
-  }
-}
-
-.carousel-choice-circle
-  .carousel-choice-circle-item:nth-child(5)
-  .carousel-choice-circle-label {
-  background: #ffea00;
-
-  &::before {
-    border: 2px solid #ffea00;
-  }
-}
-
-.carousel-choice-circle-radio:checked + .carousel-choice-circle-label {
-  &::before {
-    opacity: 1;
-  }
-}
-
-.carousel-shop__dots-wrap {
+.carousel-shop__item-img {
   position: absolute;
+  bottom: 0px;
+  height: 650px;
+  width: 500px !important;
   right: 0;
-  top: 125px;
-  z-index: 300;
+  z-index: 50;
+
+  img {
+    object-fit: contain;
+    filter: drop-shadow(-5px -5px 15px rgba(0, 0, 0, 0.5));
+  }
 }
 
-.carousel-shop__dots {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 300;
+.animate-gallery {
+  animation: animateGallery 1s forwards 0s;
 }
 
-.carousel-shop__dots .owl-dots {
-  position: relative;
-  display: flex;
-  width: 75px;
-  height: 80px;
-  transition: all 0.4s ease-in;
-  cursor: pointer;
-  margin-left: auto;
-  background: #fff;
-  padding: 3px;
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 3px;
-    height: 1px;
-    width: calc(100% - 6px);
-    content: "";
-    background: #cbcdd5;
+@keyframes animateGallery {
+  from {
     opacity: 0;
+    transform: scale(.5);
   }
-}
 
-.owl-dots__title {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  display: grid;
-  font-family: 'Gobold Regular';
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 60px;
-  opacity: 0;
-  transition: opacity .4s ease-in-out;
-  text-transform: uppercase;
-  z-index: 100;
-  visibility: hidden;
-
-  * + * {
-    margin-top: 5px;
-  }
-}
-
-.carousel-shop__dots .owl-dots + .owl-dots {
-  &::before {
+  to {
     opacity: 1;
+    transform: scale(1);
   }
 }
-
-.carousel-shop__dots .owl-dots img {
-  display: block;
-  object-fit: contain;
-  object-position: center center;
-  width: 100%;
-  height: 100%;
-  z-index: 200;
-}
-
-.carousel-shop__dots .owl-dots:hover,
-.carousel-shop__dots .owl-dots.active {
-  width: 135px;
-  height: 125px;
-  background: linear-gradient(90deg, #00d2ff, #076ffd);
-
-  &::before {
-    opacity: 0;
-  }
-
-  .owl-dots__title {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.carousel-shop__nav {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  width: 100%;
-  z-index: 200;
-}
-
-
-.carousel-shop__nav-btn {
-  position: relative;
-  width: 17px;
-  height: 17px;
-  background: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity .3s ease-in, transform .3s ease-in;
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    content: '';
-    width: 5px;
-    height: 11px;
-    transform: translateX(-50%);
-    background: #fff;
-  }
-
-  &::after {
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    content: '';
-    transform: translateX(-50%);
-    border-top: 8px solid #fff;
-    border-right: 8px solid transparent;
-    border-left: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-  }
-}
-
-.carousel-shop__nav-prev {
-  position: absolute;
-  top: -50px;
-  right: 30px;
-  transform: rotate(180deg);
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
-.carousel-shop__nav-next {
-  position: absolute;
-  bottom: -50px;
-  right: 30px;
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
-

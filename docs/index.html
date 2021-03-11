@@ -29,7 +29,8 @@
             </div>
             <div class="header__navbar">
                 <div class="header__navbar-item">
-                    <button class="header__navbar-search" id='header-search'><svg class="header__navbar-search-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18"><image id="search" width="18" height="18" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABF1BMVEUA6v////8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8AAAACEjnWAAAAW3RSTlMAAAFVtOzywGYGF8P01ykR2eJkClLS7yWnyxMHrc0CKhveUHqUbKSmK7BFHduXaULCWMSdgwvnYj78Hlf6UfCCe9iJbYDKtk3reLIEAzx2jX1MLaUw8Z83f0GKTRXdHwAAAAFiS0dEXOrYAJcAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQflAwMQEwM7iEb3AAAAyUlEQVQY013Ph04CAQwG4B4bZE+ZMsXB3qAM2Sp7CPi//3tw5Y5L4E/aNF/SpCUiUqk1Wuj0BqM4kyCIzfQAwCyWxSqTzQ6H00Yutwden0SP8Ad4g4IhhCNMTzBHSYorhjhTAkm6JoVnpjTcCr0gzPSKN4XekWHKIqdQHgWmIkoKlVFhqtZQl6XRbLYud33gMxVhaXfQlR/qAV/9wXAkvjQ2SkSTDDjT7xp+fiWi2XyxXK2DtJliOxPoJrs9/lS3RIc9jndEJ93/GbhBIKYqxmPXAAAAAElFTkSuQmCC"/></svg></button>
+                    <input type="search" name="navbar-search" id="navbar-search" class="header__navbar-input" placeholder="Search">
+                    <button type="submit" class="header__navbar-search" id='header-search-btn'><svg class="header__navbar-search-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18"><image id="search" width="18" height="18" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABF1BMVEUA6v////8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8A6v8AAAACEjnWAAAAW3RSTlMAAAFVtOzywGYGF8P01ykR2eJkClLS7yWnyxMHrc0CKhveUHqUbKSmK7BFHduXaULCWMSdgwvnYj78Hlf6UfCCe9iJbYDKtk3reLIEAzx2jX1MLaUw8Z83f0GKTRXdHwAAAAFiS0dEXOrYAJcAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQflAwMQEwM7iEb3AAAAyUlEQVQY013Ph04CAQwG4B4bZE+ZMsXB3qAM2Sp7CPi//3tw5Y5L4E/aNF/SpCUiUqk1Wuj0BqM4kyCIzfQAwCyWxSqTzQ6H00Yutwden0SP8Ad4g4IhhCNMTzBHSYorhjhTAkm6JoVnpjTcCr0gzPSKN4XekWHKIqdQHgWmIkoKlVFhqtZQl6XRbLYud33gMxVhaXfQlR/qAV/9wXAkvjQ2SkSTDDjT7xp+fiWi2XyxXK2DtJliOxPoJrs9/lS3RIc9jndEJ93/GbhBIKYqxmPXAAAAAElFTkSuQmCC"/></svg></button>
                 </div>
                 <div class="header__navbar-item">
                     <a href="#" class="header__navbar-cart">
@@ -45,6 +46,9 @@
                         <h3 class="header__navbar-favorite-title">Favorites</h3>
                     </div>
                 </div>
+                <div class="header__navbar-item">
+                    <button type="button" class="header__navbar-sign-in" id="sign-in-btn"><img src="./images/svg/user.png" alt="user"> <span>Sign in</span></button>
+                </div>
             </div>
             <button type="button" class="header__burger">
                 <span class="header__burger-box"></span>
@@ -58,7 +62,38 @@
                 <span class="header__burger-box"></span>
             </button>
         </header>
-        <main class="main">
+        <section class="sign-in">
+            <div class="sign-in-wrap">
+                <div class="user signinBx">
+                    <div class="imgBx"><img src="./images/sign-in/01.jpg" alt="sign-in-01"></div>
+                    <div class="formBx">
+                        <form action="">
+                            <h2>Sign in</h2>
+                            <input type="text" placeholder="Username">
+                            <input type="password" name="" id="" placeholder="Password">
+                            <input type="submit" value="Login">
+                            <p class="signup">Don't have an account? <a href="#" data-link>Sign up.</a></p>
+                            <button class="sign-in__exit" type="button" data-signin-exit></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="user signupBx">
+                    <div class="formBx">
+                        <form action="">
+                            <h2>Create an account</h2>
+                            <input type="text" placeholder="Username">
+                            <input type="text" placeholder="Email Adress">
+                            <input type="password" name="" id="" placeholder="Create Password">
+                            <input type="password" name="" id="" placeholder="Confirm Password">
+                            <input type="submit" value="Sign Up">
+                            <p class="signup">Already have an account? <a href="#" data-link>Sign in.</a></p>
+                            <button class="sign-in__exit" type="button" data-signin-exit></button>
+                        </form>
+                    </div>
+                    <div class="imgBx"><img src="./images/sign-in/02.jpg" alt="sign-in-02"></div>
+                </div>
+            </div>
+        </section>        <main class="main">
             
             <div class="page-bg">
                 <span>SOUNDBLU</span>
@@ -68,22 +103,148 @@
             <section class="carousel">
                 <div class="carousel-shop owl-carousel owl-theme">
                     <div class="carousel-shop__item">
-                        <img src="./images/headphone-mini/1.png" alt="">
+                        <h3 class="carousel-shop__text">Select Product image to display:</h3>
+                        <div class="carousel-shop__gallery">
+                            <div class="carousel-shop__gallery-item carousel-shop__gallery-item--active">
+                                <img src="./images/headphone-mini/1.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/2.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/3.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/4.png" alt="headphone-01">
+                            </div>
+                        </div>
+                        <div class="carousel-shop__title-wrap">
+                            <h2 class="carousel-shop__title"><span>b</span><span>l</span><span>u</span></h2>
+                            <h2 class="carousel-shop__title"><span>e</span><span>d</span><span>i</span><span>o</span></h2>
+                        </div>
+                        <div class="carousel-shop__item-img" data-item="1">
+                            <img src="./images/headphone-mini/1.png" alt="">
+                        </div>
                     </div>
                     <div class="carousel-shop__item">
-                        <img src="./images/headphone-mini/2.png" alt="">
+                        <h3 class="carousel-shop__text">Select Product image to display:</h3>
+                        <div class="carousel-shop__gallery">
+                            <div class="carousel-shop__gallery-item carousel-shop__gallery-item--active">
+                                <img src="./images/headphone-mini/2.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/1.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/3.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/4.png" alt="headphone-01">
+                            </div>
+                        </div>
+                        <div class="carousel-shop__title-wrap">
+                            <h2 class="carousel-shop__title"><span>b</span><span>l</span><span>u</span></h2>
+                            <h2 class="carousel-shop__title"><span>e</span><span>d</span><span>i</span><span>o</span></h2>
+                        </div>
+                        <div class="carousel-shop__item-img" data-item="2">
+                            <img src="./images/headphone-mini/2.png" alt="">
+                        </div>
                     </div>
                     <div class="carousel-shop__item">
-                        <img src="./images/headphone-mini/3.png" alt="">
+                        <h3 class="carousel-shop__text">Select Product image to display:</h3>
+                        <div class="carousel-shop__gallery">
+                            <div class="carousel-shop__gallery-item carousel-shop__gallery-item--active">
+                                <img src="./images/headphone-mini/3.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/2.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/1.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/4.png" alt="headphone-01">
+                            </div>
+                        </div>
+                        <div class="carousel-shop__title-wrap">
+                            <h2 class="carousel-shop__title"><span>b</span><span>l</span><span>u</span></h2>
+                            <h2 class="carousel-shop__title"><span>e</span><span>d</span><span>i</span><span>o</span></h2>
+                        </div>
+                        <div class="carousel-shop__item-img" data-item="3">
+                            <img src="./images/headphone-mini/3.png" alt="">
+                        </div>
                     </div>
                     <div class="carousel-shop__item">
-                        <img src="./images/headphone-mini/4.png" alt="">
+                        <h3 class="carousel-shop__text">Select Product image to display:</h3>
+                        <div class="carousel-shop__gallery">
+                            <div class="carousel-shop__gallery-item carousel-shop__gallery-item--active">
+                                <img src="./images/headphone-mini/4.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/2.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/3.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/1.png" alt="headphone-01">
+                            </div>
+                        </div>
+                        <div class="carousel-shop__title-wrap">
+                            <h2 class="carousel-shop__title"><span>b</span><span>l</span><span>u</span></h2>
+                            <h2 class="carousel-shop__title"><span>e</span><span>d</span><span>i</span><span>o</span></h2>
+                        </div>
+                        <div class="carousel-shop__item-img"  data-item="4">
+                            <img src="./images/headphone-mini/4.png" alt="">
+                        </div>
                     </div>
                     <div class="carousel-shop__item">
-                        <img src="./images/headphone-mini/5.png" alt="">
+                        <h3 class="carousel-shop__text">Select Product image to display:</h3>
+                        <div class="carousel-shop__gallery">
+                            <div class="carousel-shop__gallery-item carousel-shop__gallery-item--active">
+                                <img src="./images/headphone-mini/5.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/2.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/3.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/4.png" alt="headphone-01">
+                            </div>
+                        </div>
+                        <div class="carousel-shop__title-wrap">
+                            <h2 class="carousel-shop__title"><span>b</span><span>l</span><span>u</span></h2>
+                            <h2 class="carousel-shop__title"><span>e</span><span>d</span><span>i</span><span>o</span></h2>
+                        </div>
+                        <div class="carousel-shop__item-img"  data-item="5">
+                            <img src="./images/headphone-mini/5.png" alt="">
+                        </div>
                     </div>
                     <div class="carousel-shop__item">
-                        <img src="./images/headphone-mini/6.png" alt="">
+                        <h3 class="carousel-shop__text">Select Product image to display:</h3>
+                        <div class="carousel-shop__gallery">
+                            <div class="carousel-shop__gallery-item carousel-shop__gallery-item--active">
+                                <img src="./images/headphone-mini/6.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/beats/02.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/beats/03.png" alt="headphone-01">
+                            </div>
+                            <div class="carousel-shop__gallery-item">
+                                <img src="./images/headphone-mini/beats/04.png" alt="headphone-01">
+                            </div>
+                        </div>
+                        <div class="carousel-shop__title-wrap">
+                            <h2 class="carousel-shop__title"><span>b</span><span>l</span><span>u</span></h2>
+                            <h2 class="carousel-shop__title"><span>e</span><span>d</span><span>i</span><span>o</span></h2>
+                        </div>
+                        <div class="carousel-shop__item-img" data-item="6">
+                            <img src="./images/headphone-mini/6.png" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="carousel-shop__dots-wrap">
@@ -119,25 +280,31 @@
                     </div>
                 </div>
                 <div class="carousel-choice-circle">
-                    <div class="carousel-choice-circle-item">
-                        <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-blue">
-                        <label for="choice-circle-blue" class="carousel-choice-circle-label" data-circle='#008aff'><span></span></label>
-                    </div>
-                    <div class="carousel-choice-circle-item">
-                        <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-white" checked>
-                        <label for="choice-circle-white" class="carousel-choice-circle-label" data-circle='#ffffff'><span></span></label>
-                    </div>
-                    <div class="carousel-choice-circle-item">
-                        <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-green">
-                        <label for="choice-circle-green" class="carousel-choice-circle-label" data-circle='#00fff6'><span></span></label>
-                    </div>
-                    <div class="carousel-choice-circle-item">
-                        <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-red">
-                        <label for="choice-circle-red" class="carousel-choice-circle-label" data-circle='#ff0000'><span></span></label>
-                    </div>
-                    <div class="carousel-choice-circle-item">
-                        <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-yellow">
-                        <label for="choice-circle-yellow" class="carousel-choice-circle-label" data-circle='#ffea00'><span></span></label>
+                    <h4 class="carousel-choice-circle__text">
+                        <span>AVAILABLE</span>
+                        <span>COLOURS</span>
+                    </h4>
+                    <div class="carousel-choice-circle-wrap">
+                        <div class="carousel-choice-circle-item">
+                            <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-blue">
+                            <label for="choice-circle-blue" class="carousel-choice-circle-label" data-circle='#008aff'><span></span></label>
+                        </div>
+                        <div class="carousel-choice-circle-item">
+                            <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-white" checked>
+                            <label for="choice-circle-white" class="carousel-choice-circle-label" data-circle='#ffffff'><span></span></label>
+                        </div>
+                        <div class="carousel-choice-circle-item">
+                            <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-green">
+                            <label for="choice-circle-green" class="carousel-choice-circle-label" data-circle='#00fff6'><span></span></label>
+                        </div>
+                        <div class="carousel-choice-circle-item">
+                            <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-red">
+                            <label for="choice-circle-red" class="carousel-choice-circle-label" data-circle='#ff0000'><span></span></label>
+                        </div>
+                        <div class="carousel-choice-circle-item">
+                            <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-yellow">
+                            <label for="choice-circle-yellow" class="carousel-choice-circle-label" data-circle='#ffea00'><span></span></label>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -194,8 +361,10 @@
                     </div>
                 </div>
                 <div class="footer__features-social">
-                    <button class="footer__features-favorite" id='footer-favorite'></button>
-                    <a href="#" class="footer__features-link">ADD TO CART</a>
+                    <div class="footer__features-social-row">
+                        <button class="footer__features-favorite header__navbar-favorite--on" id='footer-favorite'></button>
+                        <a href="#" class="footer__features-link"><span>ADD TO CART</span></a>
+                    </div>
                 </div>
             </div>
         </footer>

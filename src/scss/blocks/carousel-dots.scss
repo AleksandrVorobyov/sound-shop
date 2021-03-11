@@ -1,0 +1,87 @@
+.carousel-shop__dots-wrap {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: 300;
+  transform: translateY(-50%);
+}
+
+.carousel-shop__dots {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 300;
+}
+
+.carousel-shop__dots .owl-dots {
+  position: relative;
+  display: flex;
+  width: 75px;
+  height: 80px;
+  transition: all 0.4s ease-in;
+  cursor: pointer;
+  margin-left: auto;
+  background: #fff;
+  padding: 3px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    height: 1px;
+    width: calc(100% - 6px);
+    content: "";
+    background: #cbcdd5;
+    opacity: 0;
+  }
+}
+
+.owl-dots__title {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: grid;
+  font-family: "Gobold Regular";
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 60px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  text-transform: uppercase;
+  z-index: 100;
+  visibility: hidden;
+
+  * + * {
+    margin-top: 5px;
+  }
+}
+
+.carousel-shop__dots .owl-dots + .owl-dots {
+  &::before {
+    opacity: 1;
+  }
+}
+
+.carousel-shop__dots .owl-dots img {
+  display: block;
+  object-fit: contain;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+.carousel-shop__dots .owl-dots:hover,
+.carousel-shop__dots .owl-dots.active {
+  width: 135px;
+  height: 125px;
+  background: linear-gradient(90deg, #00d2ff, #076ffd);
+
+  &::before {
+    opacity: 0;
+  }
+
+  .owl-dots__title {
+    opacity: 1;
+    visibility: visible;
+  }
+}

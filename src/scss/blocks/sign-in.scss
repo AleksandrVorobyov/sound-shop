@@ -1,0 +1,226 @@
+.sign-in {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(81, 241, 247, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: .5s;
+    z-index: 500;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s linear, background .4s linear;
+}
+
+.sign-in.sign-in--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sign-in.active {
+    background: rgba(153, 252, 255, 0.8);
+}
+
+.sign-in .sign-in-wrap {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.imgBx {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: .5s;
+}
+
+.imgBx  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.formBx {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.formBx h2 {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.formBx input {
+    width: 100%;
+    padding: 10px;
+    background: #f5f5f5;
+    color: #333;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 8px 0;
+    letter-spacing: 1px;
+}
+
+.formBx input[type='submit'] {
+    cursor: pointer;
+    max-width: 100px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: #677eff;
+}
+
+.user.signinBx .formBx input[type='submit'] {
+    background: #e73e49;
+}
+
+
+.signup {
+    position: relative;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.signup a {
+    font-weight: 600px;
+    text-decoration: none;
+    color: #577eff;
+}
+
+.sign-in-wrap .signupBx {
+    pointer-events: none;
+}
+
+.sign-in-wrap.active .signupBx {
+    pointer-events: initial;
+}
+
+.sign-in-wrap .signupBx .formBx {
+    top: 100%;
+}
+
+.sign-in-wrap.active .signupBx .formBx {
+    top: 0;
+}
+
+.sign-in-wrap .signupBx .imgBx {
+    top: -100%;
+    transition: .5s;
+}
+
+.sign-in-wrap.active .signupBx .imgBx {
+    top: 0;
+}
+
+.sign-in-wrap .signinBx .formBx{
+    top: 0;
+}
+
+.sign-in-wrap.active .signinBx .formBx {
+    top: 100%;
+}
+
+.sign-in-wrap .signinBx .imgBx{
+    top: 0;
+    transition: .5s;
+}
+
+.sign-in-wrap.active .signinBx .imgBx {
+    top: -100%;
+}
+
+@media (max-width: 991px) {
+    .sign-in-wrap {
+        max-width: 400px;
+    }
+
+    .formBx {
+        width: 100%;
+    }
+
+    .imgBx {
+        display: none;
+    }
+}
+
+.sign-in__exit {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    opacity: 0.6;
+    transition: opacity .4s ease-out;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        transform: translateY(-50%) rotate(45deg);
+        transform-origin: center;
+        background: #5f5f5f;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        transform: translateY(-50%) rotate(-45deg);
+        transform-origin: center;
+        background: #5f5f5f;
+    }
+}
+
+.sign-in__exit:hover {
+    opacity: 1;
+}

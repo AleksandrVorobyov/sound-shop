@@ -1,0 +1,64 @@
+.carousel-shop__nav {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+  }
+  
+  .carousel-shop__nav-btn {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity .3s ease-in, transform .3s ease-in;
+  
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      content: '';
+      width: 5px;
+      height: 11px;
+      transform: translateX(-50%);
+      background: #fff;
+    }
+  
+    &::after {
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      content: '';
+      transform: translateX(-50%);
+      border-top: 8px solid #fff;
+      border-right: 8px solid transparent;
+      border-left: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+    }
+  }
+  
+  .carousel-shop__nav-prev {
+    position: absolute;
+    top: -50px;
+    right: 30px;
+    transform: rotate(180deg);
+  
+    &:hover {
+      opacity: 1;
+    }
+  }
+  
+  .carousel-shop__nav-next {
+    position: absolute;
+    bottom: -50px;
+    right: 30px;
+  
+    &:hover {
+      opacity: 1;
+    }
+  }
