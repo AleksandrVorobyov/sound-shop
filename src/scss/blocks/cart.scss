@@ -1,0 +1,233 @@
+.cart {
+  position: relative;
+  padding: 150px 0;
+}
+
+.cart__table-title {
+  margin-bottom: 50px;
+  font-size: 56px;
+  line-height: 56px;
+  font-family: "Roboto-Bold";
+  color: rgb(255, 255, 255);
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.cart__table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 50px 30px;
+  margin: 0 60px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+}
+
+.cart__table-first-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #b6b6b6;
+
+  li {
+    padding-bottom: 10px;
+  }
+}
+
+.cart__table-item {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.cart__table-row .cart__table-item {
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart__table-item + .cart__table-item {
+  border-left: 1px solid #b6b6b6;
+}
+
+.cart__table-nav-title {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  line-height: 30px;
+  font-weight: 500;
+  font-family: "Roboto-Medium";
+}
+
+.cart__table-item:nth-child(1) {
+  flex: 70%;
+}
+
+.cart__table-item:nth-child(2) {
+  flex: 10%;
+}
+
+.cart__table-item:nth-child(3) {
+  flex: 10%;
+}
+
+.cart__table-item:nth-child(4) {
+  flex: 10%;
+}
+
+.cart__table-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #b6b6b6;
+  transition: background 0.2s ease-in-out;
+}
+
+.cart__table-row:hover {
+  background: #b6b6b663;
+}
+
+.cart__table-item {
+  padding: 0 10px;
+}
+
+.cart__table-item-wrap {
+  display: flex;
+}
+
+.cart__table-item-link {
+  margin-right: 15px;
+  width: 130px;
+  height: 130px;
+  position: relative;
+  display: inline-table;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.cart__table-item-text {
+  text-align: left;
+}
+
+.cart__table-item-data {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-family: "Roboto-Medium";
+  color: rgb(255, 255, 255) !important;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 3px;
+}
+
+.cart__table-item-title {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-family: "Roboto-Bold";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+
+.cart__table-item-meta {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: "Roboto-Medium";
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 1px;
+}
+
+.cart__table-item-desc {
+  font-size: 16px;
+  font-family: "Roboto-Regular";
+  color: rgb(138, 138, 138);
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.cart__table-item {
+  color: #8a8a8a;
+}
+
+.cart__table-btn {
+  width: 30px;
+  height: 30px;
+  background: #b6b6b6;
+  border: none;
+}
+
+.cart__table-result {
+  width: 30px;
+  height: 30px;
+  background: #8a8a8a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+.cart__table-last-row {
+  display: flex;
+  margin-top: auto;
+  border-top: 1px solid #b6b6b6;
+
+  .cart__table-item {
+    flex: auto;
+    padding: 10px 0;
+  }
+}
+
+.cart__table-total {
+  font-size: 24px;
+  font-family: "Roboto-Medium";
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+
+.cart__table-buy {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: "Roboto-Medium";
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 1px;
+  background: transparent;
+  border: 2px solid #00fcff;
+  border-radius: 10px;
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -6px;
+    left: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    background: transparent;
+    border: 2px solid #00fcff;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &:hover::before  {
+    opacity: 1;
+  }
+}

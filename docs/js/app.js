@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log('file 1');\r\n\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("const burgerBtn = document.querySelector('.header__burger');\r\nconst sidebar = document.getElementById('sidebar');\r\n\r\nburgerBtn.addEventListener('click', function() {\r\n    sidebar.classList.toggle('active');\r\n})\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ }),
 
@@ -105,6 +105,17 @@ eval("console.log('file 1');\r\n\n\n//# sourceURL=webpack:///./src/js/app.js?");
 /***/ (function(module, exports) {
 
 eval("$(document).ready(function(){\r\n    $(\".carousel-shop\").owlCarousel({\r\n        nav: false,\r\n        dots: true,\r\n        items: 1,\r\n        animateOut: 'animate__backOutDown',\r\n        animateIn: 'animate__backInDown',\r\n        smartSpeed: 850,\r\n        margin:30,\r\n        stagePadding:30,\r\n        dotsContainer: '#carousel-custom-dots',\r\n        mouseDrag: false,\r\n        touchDrag: false,\r\n    });\r\n\r\n    $('.owl-dots').click(function () {\r\n        $('.carousel-shop').trigger('to.owl.carousel', [$(this).index(), 300]);\r\n    });\r\n\r\n    $('.carousel-shop__nav-next').click(function() {\r\n        $(\".carousel-shop\").trigger('next.owl.carousel', [2500]);\r\n    })\r\n    $('.carousel-shop__nav-prev').click(function() {\r\n        $(\".carousel-shop\").trigger('prev.owl.carousel', [2500]);\r\n    })\r\n});\r\n\r\nconst carouselGalleryItems = document.querySelectorAll('.carousel-shop__gallery-item');\r\n\r\ncarouselGalleryItems.forEach( function(item) {\r\n    item.addEventListener('click', function(e) {\r\n        let parentBlock = e.target.closest('.carousel-shop__item');\r\n        parentBlock.querySelectorAll('.carousel-shop__gallery-item').forEach(function(item) {\r\n            item.classList.remove('carousel-shop__gallery-item--active');\r\n        });\r\n        item.classList.add('carousel-shop__gallery-item--active');\r\n        let imgClick = e.target.querySelector('img');\r\n        let imgClickSrc = imgClick.src;\r\n        let imgBig = parentBlock.querySelector('.carousel-shop__item-img');\r\n        imgBig.classList.add('animate-gallery');\r\n        let imgBigItem = parentBlock.querySelector('.carousel-shop__item-img img');\r\n        imgBigItem.src = imgClickSrc;\r\n        setTimeout(() => {\r\n            imgBig.classList.remove('animate-gallery');\r\n        }, 900);\r\n    })\r\n})\r\n\r\nconst labelCircleAll = document.querySelectorAll('[data-circle]');\r\nlabelCircleAll.forEach(function(item) {\r\n    item.addEventListener('click', function(e) {\r\n        let bif = e.target.dataset.circle;\r\n        document.querySelectorAll('.carousel-shop__title').forEach(function(item) {\r\n            item.style.color = bif;\r\n        })\r\n    })\r\n});\n\n//# sourceURL=webpack:///./src/js/carousel.js?");
+
+/***/ }),
+
+/***/ "./src/js/cart.js":
+/*!************************!*\
+  !*** ./src/js/cart.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("const cart = document.getElementById('link-to-cart');\r\nconst cartLink = document.getElementById('link-for-cart');\r\nconst headerCart = document.querySelector('.header__navbar-cart');\r\n\r\ncartLink.addEventListener('click', function() {\r\n    let cartItems = cart.getAttribute('data-cart');\r\n    let cartItemsNum = parseInt(cartItems);\r\n    let cartItemsMore = cartItemsNum + 1;\r\n    headerCart.classList.add('active');\r\n    setTimeout(() => {\r\n        headerCart.classList.remove('active');\r\n    }, 5000);\r\n    \r\n    return cart.setAttribute('data-cart', cartItemsMore);\r\n});\r\n\r\nconst productItems = document.querySelectorAll('.cart__table-row');\r\n\r\nfunction quantityRes() {\r\n    productItems.forEach( function(item) {\r\n        let quantity = item.querySelector('[data-quantity]'),\r\n            quantityMin = item.querySelector('[data-min]'),\r\n            quantityPlus = item.querySelector('[data-plus]'),\r\n            quantityResult,\r\n            productCost = item.querySelector('[data-cost]'),\r\n            productPrice = item.querySelector('[data-price]').innerHTML;\r\n            productCost.innerHTML = productPrice;\r\n\r\n            cartTotalFunc ();\r\n\r\n        quantityMin.addEventListener('click', () => {\r\n            quantityResult = quantity.innerHTML - 1;\r\n\r\n            if (parseInt(quantityResult) == 0) {\r\n                item.remove();\r\n            }\r\n\r\n            return productCost.innerHTML = parseInt((quantityResult * productPrice)),\r\n             quantity.innerHTML = quantityResult, productCost, cartTotalFunc ();\r\n        });\r\n\r\n        quantityPlus.addEventListener('click', () => {\r\n            quantityResult = parseInt(quantity.innerHTML) + 1;\r\n\r\n            return productCost.innerHTML = parseInt((quantityResult * productPrice)),\r\n            quantity.innerHTML = quantityResult, productCost, cartTotalFunc ();\r\n        });\r\n    })\r\n}\r\n\r\nquantityRes();\r\n\r\nfunction cartTotalFunc () {\r\n    const cartTotal = document.querySelector('[data-cart-total]');\r\n    const allCost = document.querySelectorAll('[data-cost]');\r\n    const massAllCost = Array.from(allCost);\r\n    let massResCost = [];\r\n\r\n    massAllCost.forEach( (e) => {\r\n        return massResCost.push(e.innerHTML);\r\n    })\r\n\r\n    let costSum = 0;\r\n\r\n    for (let i = 0; i < massResCost.length; i++) {\r\n         costSum = costSum + parseInt(massResCost[i]);\r\n    }\r\n\r\n    cartTotal.innerHTML = ` ${costSum}$`;\r\n}\r\n\n\n//# sourceURL=webpack:///./src/js/cart.js?");
 
 /***/ }),
 
@@ -142,13 +153,13 @@ eval("const signInLinks = document.querySelectorAll('[data-link]').forEach((item
 /***/ }),
 
 /***/ 0:
-/*!******************************************************************************************************************!*\
-  !*** multi ./src/js/app.js ./src/js/carousel.js ./src/js/favorite.js ./src/js/search-btn.js ./src/js/sign-in.js ***!
-  \******************************************************************************************************************/
+/*!***********************************************************************************************************************************!*\
+  !*** multi ./src/js/app.js ./src/js/carousel.js ./src/js/cart.js ./src/js/favorite.js ./src/js/search-btn.js ./src/js/sign-in.js ***!
+  \***********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\app.js */\"./src/js/app.js\");\n__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\carousel.js */\"./src/js/carousel.js\");\n__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\favorite.js */\"./src/js/favorite.js\");\n__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\search-btn.js */\"./src/js/search-btn.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\sign-in.js */\"./src/js/sign-in.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/app.js_./src/js/carousel.js_./src/js/favorite.js_./src/js/search-btn.js_./src/js/sign-in.js?");
+eval("__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\app.js */\"./src/js/app.js\");\n__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\carousel.js */\"./src/js/carousel.js\");\n__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\cart.js */\"./src/js/cart.js\");\n__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\favorite.js */\"./src/js/favorite.js\");\n__webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\search-btn.js */\"./src/js/search-btn.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\Alex\\Desktop\\sound-shop\\src\\js\\sign-in.js */\"./src/js/sign-in.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/app.js_./src/js/carousel.js_./src/js/cart.js_./src/js/favorite.js_./src/js/search-btn.js_./src/js/sign-in.js?");
 
 /***/ })
 

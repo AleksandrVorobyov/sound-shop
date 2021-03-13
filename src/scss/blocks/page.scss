@@ -1,3 +1,22 @@
 .page {
     overflow: hidden;
 }
+
+.page-bg {
+    position: absolute;
+    top: 50%;
+    left: -70px;
+    width: calc(100% + 70px);
+    transform: translateY(-50%);
+    user-select: none;
+    z-index: -100;
+    overflow: hidden;
+
+    span {
+        display: block;
+        color: rgba(255, 255, 255, 0.1);
+        font-family: 'Gobold Regular';
+        font-size: 1000px;
+        line-height: 1050px;
+    }
+}
