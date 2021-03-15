@@ -1,16 +1,27 @@
 .carousel-shop__dots-wrap {
   position: absolute;
-  right: 0;
-  top: 50%;
   z-index: 300;
-  transform: translateY(-50%);
+  left: 20%;
+  top: 15%;
+  transform: translateX(-50%);
+  
+  @media (min-width: 720px) {
+    left: auto;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .carousel-shop__dots {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 300;
+  display: none;
+
+  @media (min-width: 720px) {
+    display: flex;
+    position: relative;
+    z-index: 300;
+    flex-direction: column;
+  }
 }
 
 .carousel-shop__dots .owl-dots {
@@ -40,7 +51,7 @@
   position: absolute;
   top: 0;
   left: -100%;
-  display: grid;
+  display: none;
   font-family: "Gobold Regular";
   color: rgba(255, 255, 255, 0.3);
   font-size: 60px;
@@ -52,6 +63,10 @@
 
   * + * {
     margin-top: 5px;
+  }
+
+  @media (min-width: 720px) {
+    display: grid;
   }
 }
 

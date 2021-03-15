@@ -14,9 +14,13 @@
 .footer__payment {
   position: relative;
   background: #000724;
-  padding: 25px 90px 35px;
+  padding: 25px 30px 35px;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 480px) {
+    padding: 25px 90px 35px;
+  }
 
   @media (min-width: 980px) {
     display: flex;
@@ -54,9 +58,13 @@
 .footer__features {
   display: flex;
   width: 100%;
-  padding: 25px 90px 35px;
+  padding: 25px 30px 35px;
   flex-direction: column-reverse;
   align-items: flex-start;
+
+  @media (min-width: 480px) {
+    padding: 25px 90px 35px;
+  }
 
   @media (min-width: 660px) {
     align-items: center;

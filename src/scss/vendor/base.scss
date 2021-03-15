@@ -18,7 +18,14 @@ body {
 main {
     position: relative;
     z-index: 50;
+    min-height: 90vh;
+
+    @media (min-width: 720px) {
+        min-height: 100vh;
+    }
 }
 
-img { pointer-events: none; }
+img { 
+    pointer-events: none; 
+}
 

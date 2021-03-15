@@ -3,17 +3,20 @@
         <div class="carousel-shop__item">
             <h3 class="carousel-shop__text">Select Product image to display:</h3>
             <div class="carousel-shop__gallery">
-                <div class="carousel-shop__gallery-item carousel-shop__gallery-item--active">
-                    <img src="./images/headphone-mini/1.png" alt="headphone-01">
+                <div class="carousel-shop__gallery-item carousel-shop__gallery-item--active" data-item='blue' style="--i:1;">
+                    <img src="./images/headphone-mini/beats/01.png" alt="headphone-01">
                 </div>
-                <div class="carousel-shop__gallery-item">
-                    <img src="./images/headphone-mini/2.png" alt="headphone-01">
+                <div class="carousel-shop__gallery-item" data-item='white' style="--i:2;">
+                    <img src="./images/headphone-mini/beats/02.png" alt="headphone-02">
                 </div>
-                <div class="carousel-shop__gallery-item">
-                    <img src="./images/headphone-mini/3.png" alt="headphone-01">
+                <div class="carousel-shop__gallery-item" data-item='aqua' style="--i:3;">
+                    <img src="./images/headphone-mini/beats/03.png" alt="headphone-03">
                 </div>
-                <div class="carousel-shop__gallery-item">
-                    <img src="./images/headphone-mini/4.png" alt="headphone-01">
+                <div class="carousel-shop__gallery-item" data-item='red' style="--i:4;">
+                    <img src="./images/headphone-mini/beats/04.png" alt="headphone-04">
+                </div>
+                <div class="carousel-shop__gallery-item" data-item='yellow' style="--i:5;">
+                    <img src="./images/headphone-mini/beats/05.png" alt="headphone-05">
                 </div>
             </div>
             <div class="carousel-shop__title-wrap">
@@ -21,22 +24,22 @@
                 <h2 class="carousel-shop__title"><span>e</span><span>d</span><span>i</span><span>o</span></h2>
             </div>
             <div class="carousel-shop__item-img" data-item="1">
-                <img src="./images/headphone-mini/1.png" alt="">
+                <img src="./images/headphone-mini/beats/01.png" alt="beats-01">
             </div>
         </div>
         <div class="carousel-shop__item">
             <h3 class="carousel-shop__text">Select Product image to display:</h3>
             <div class="carousel-shop__gallery">
-                <div class="carousel-shop__gallery-item carousel-shop__gallery-item--active">
+                <div class="carousel-shop__gallery-item carousel-shop__gallery-item--active" style="--i:1;">
                     <img src="./images/headphone-mini/2.png" alt="headphone-01">
                 </div>
-                <div class="carousel-shop__gallery-item">
+                <div class="carousel-shop__gallery-item" style="--i:2;">
                     <img src="./images/headphone-mini/1.png" alt="headphone-01">
                 </div>
-                <div class="carousel-shop__gallery-item">
+                <div class="carousel-shop__gallery-item" style="--i:3;">
                     <img src="./images/headphone-mini/3.png" alt="headphone-01">
                 </div>
-                <div class="carousel-shop__gallery-item">
+                <div class="carousel-shop__gallery-item" style="--i:4;">
                     <img src="./images/headphone-mini/4.png" alt="headphone-01">
                 </div>
             </div>
@@ -52,13 +55,13 @@
             <h3 class="carousel-shop__text">Select Product image to display:</h3>
             <div class="carousel-shop__gallery">
                 <div class="carousel-shop__gallery-item carousel-shop__gallery-item--active">
-                    <img src="./images/headphone-mini/3.png" alt="headphone-01">
+                    <img src="./images/headphone-mini/1.png" alt="headphone-01">
                 </div>
                 <div class="carousel-shop__gallery-item">
                     <img src="./images/headphone-mini/2.png" alt="headphone-01">
                 </div>
                 <div class="carousel-shop__gallery-item">
-                    <img src="./images/headphone-mini/1.png" alt="headphone-01">
+                    <img src="./images/headphone-mini/5.png" alt="headphone-01">
                 </div>
                 <div class="carousel-shop__gallery-item">
                     <img src="./images/headphone-mini/4.png" alt="headphone-01">
@@ -148,7 +151,7 @@
     <div class="carousel-shop__dots-wrap">
         <div class="carousel-shop__dots" id="carousel-custom-dots">
             <div class="owl-dots">
-                <img src="./images/headphone-mini/1.png" alt="headphone-mini-01">
+                <img src="./images/headphone-mini/beats/01.png" alt="headphone-01">
                 <div class="owl-dots__title"><span>BLU</span><span>EDIO</span></div>
             </div>
             <div class="owl-dots">
@@ -156,7 +159,7 @@
                 <div class="owl-dots__title"><span>BLU</span><span>EDIO</span></div>
             </div>
             <div class="owl-dots">
-                <img src="./images/headphone-mini/3.png" alt="headphone-mini-03">
+                <img src="./images/headphone-mini/1.png" alt="headphone-mini-01">
                 <div class="owl-dots__title"><span>BLU</span><span>EDIO</span></div>
             </div>
             <div class="owl-dots">
@@ -173,8 +176,8 @@
             </div>
         </div>
         <div class="carousel-shop__nav">
-            <button class="carousel-shop__nav-btn carousel-shop__nav-prev" id="shop-nav-prev"></button>
-            <button class="carousel-shop__nav-btn carousel-shop__nav-next" id="shop-nav-next"></button>
+            <button class="carousel-shop__nav-btn carousel-shop__nav-prev" id="shop-nav-prev">Prev<span></span></button>
+            <button class="carousel-shop__nav-btn carousel-shop__nav-next" id="shop-nav-next">Next<span></span></button>
         </div>
     </div>
     <div class="carousel-choice-circle">
@@ -184,24 +187,24 @@
         </h4>
         <div class="carousel-choice-circle-wrap">
             <div class="carousel-choice-circle-item">
-                <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-blue">
-                <label for="choice-circle-blue" class="carousel-choice-circle-label" data-circle='#008aff'><span></span></label>
+                <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-blue" checked>
+                <label for="choice-circle-blue" class="carousel-choice-circle-label" data-circle='blue'><span></span></label>
             </div>
             <div class="carousel-choice-circle-item">
-                <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-white" checked>
-                <label for="choice-circle-white" class="carousel-choice-circle-label" data-circle='#ffffff'><span></span></label>
+                <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-white">
+                <label for="choice-circle-white" class="carousel-choice-circle-label" data-circle='white'><span></span></label>
             </div>
             <div class="carousel-choice-circle-item">
                 <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-green">
-                <label for="choice-circle-green" class="carousel-choice-circle-label" data-circle='#00fff6'><span></span></label>
+                <label for="choice-circle-green" class="carousel-choice-circle-label" data-circle='aqua'><span></span></label>
             </div>
             <div class="carousel-choice-circle-item">
                 <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-red">
-                <label for="choice-circle-red" class="carousel-choice-circle-label" data-circle='#ff0000'><span></span></label>
+                <label for="choice-circle-red" class="carousel-choice-circle-label" data-circle='red'><span></span></label>
             </div>
             <div class="carousel-choice-circle-item">
                 <input type="radio" name="choice-circle-radio" class="carousel-choice-circle-radio" id="choice-circle-yellow">
-                <label for="choice-circle-yellow" class="carousel-choice-circle-label" data-circle='#ffea00'><span></span></label>
+                <label for="choice-circle-yellow" class="carousel-choice-circle-label" data-circle='yellow'><span></span></label>
             </div>
         </div>
     </div>

@@ -1,7 +1,9 @@
 .carousel {
-  position: relative;
+  position: absolute;
   width: 100%;
   z-index: 300;
+  top: 50%;
+  transform: translateY(-50%);
 
   &::before {
     position: absolute;

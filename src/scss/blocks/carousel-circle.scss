@@ -1,10 +1,16 @@
 .carousel-choice-circle {
   position: absolute;
-  top: 50%;
-  left: 55px;
-  transform: translateY(-50%);
+  top: 90%;
+  left: 50%;
   z-index: 300;
-  width: 86px;
+  transform: translateX(-50%);
+  
+  @media (min-width: 980px) {
+    width: 86px;
+    top: 50%;
+    left: 55px;
+    transform: translateY(-50%) translateX(0%);
+  }
 }
 
 .carousel-choice-circle__text {
@@ -24,9 +30,8 @@
 .carousel-choice-circle-wrap {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 20px;
   border-width: 3px;
   border-style: solid;
   border-image: linear-gradient(to bottom, #00d2ff, #00d0ff00) 0 100% 0;
@@ -39,6 +44,11 @@
     height: 3px;
     content: "";
     background: #00d2ff;
+  }
+
+  @media (min-width: 980px) {
+    padding: 20px 0;
+    flex-direction: column;
   }
 }
 
@@ -71,7 +81,14 @@
 }
 
 .carousel-choice-circle-item + .carousel-choice-circle-item {
-  margin-top: 20px;
+  margin-left: 20px;
+}
+
+@media (min-width: 980px) {
+  .carousel-choice-circle-item + .carousel-choice-circle-item {
+    margin-top: 20px;
+    margin-left: 0;
+  }
 }
 
 .carousel-choice-circle

@@ -2,23 +2,30 @@
     position: absolute;
     top: 0px;
     right: 0px;
-    height: 100%;
     width: 100%;
     z-index: 200;
+    display: flex;
   }
   
   .carousel-shop__nav-btn {
     position: relative;
-    width: 17px;
-    height: 17px;
+    display: block;
     background: transparent;
     border: none;
     outline: none;
     cursor: pointer;
     opacity: 0.7;
     transition: opacity .3s ease-in, transform .3s ease-in;
+    font-size: 18px;
+    line-height: 18px;
+    color: #fff;
+
+    span {
+      width: 17px;
+      height: 17px;
+    }
   
-    &::before {
+    span::before {
       position: absolute;
       top: 0;
       left: 50%;
@@ -29,7 +36,7 @@
       background: #fff;
     }
   
-    &::after {
+    span::after {
       position: absolute;
       bottom: -8px;
       left: 50%;
@@ -42,21 +49,22 @@
     }
   }
   
-  .carousel-shop__nav-prev {
+  .carousel-shop__nav-prev span {
     position: absolute;
-    top: -50px;
-    right: 30px;
-    transform: rotate(180deg);
+    top: 0px;
+    left: -20px;
+    transform: rotate(90deg);
   
     &:hover {
       opacity: 1;
     }
   }
   
-  .carousel-shop__nav-next {
+  .carousel-shop__nav-next span {
     position: absolute;
-    bottom: -50px;
-    right: 30px;
+    bottom: 0px;
+    right: -20px;
+    transform: rotate(-90deg);
   
     &:hover {
       opacity: 1;

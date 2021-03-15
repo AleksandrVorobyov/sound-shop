@@ -45,13 +45,3 @@ carouselGalleryItems.forEach( function(item) {
         }, 900);
     })
 })
-
-const labelCircleAll = document.querySelectorAll('[data-circle]');
-labelCircleAll.forEach(function(item) {
-    item.addEventListener('click', function(e) {
-        let bif = e.target.dataset.circle;
-        document.querySelectorAll('.carousel-shop__title').forEach(function(item) {
-            item.style.color = bif;
-        })
-    })
-});
