@@ -1,5 +1,5 @@
 .sidebar {
-  position: absolute;
+  position: fixed;
   top: 70px;
   left: -100%;
   width: auto;
@@ -11,6 +11,13 @@
   border-right: 4px solid black;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.212);
   transition: left .8s linear 0s;
+  width: 100%;
+  overflow: scroll;
+
+  @media (min-width: 600px) {
+    width: auto;
+    overflow: auto;
+  }
 }
 
 .sidebar.active {

@@ -1,12 +1,13 @@
 .carousel-choice-circle {
   position: absolute;
-  top: 90%;
+  bottom: 0%;
   left: 50%;
   z-index: 300;
   transform: translateX(-50%);
   
   @media (min-width: 980px) {
     width: 86px;
+    bottom: auto;
     top: 50%;
     left: 55px;
     transform: translateY(-50%) translateX(0%);

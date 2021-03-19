@@ -6,7 +6,7 @@ $(document).ready(function(){
         animateOut: 'animate__backOutDown',
         animateIn: 'animate__backInDown',
         smartSpeed: 850,
-        margin:30,
+        margin: 200,
         stagePadding:30,
         dotsContainer: '#carousel-custom-dots',
         mouseDrag: false,

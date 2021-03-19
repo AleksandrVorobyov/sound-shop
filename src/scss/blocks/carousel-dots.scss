@@ -1,11 +1,11 @@
 .carousel-shop__dots-wrap {
   position: absolute;
   z-index: 300;
-  left: 20%;
-  top: 15%;
-  transform: translateX(-50%);
-  
+  bottom: 20%;
+  width: 100%;
+
   @media (min-width: 720px) {
+    bottom: auto;
     left: auto;
     right: 0;
     top: 50%;
@@ -65,7 +65,7 @@
     margin-top: 5px;
   }
 
-  @media (min-width: 720px) {
+  @media (min-width: 980px) {
     display: grid;
   }
 }
