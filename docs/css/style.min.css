@@ -1034,7 +1034,8 @@ img {
   height: 500px;
   width: 350px !important;
   right: -40px;
-  z-index: 50; }
+  z-index: 50;
+  animation-play-state: paused; }
   @media (min-width: 420px) {
     .carousel-shop__item-img {
       right: 0; } }
@@ -1069,7 +1070,8 @@ img {
       left: auto;
       right: 0;
       top: 50%;
-      transform: translateY(-50%); } }
+      transform: translateY(-50%);
+      width: auto; } }
 
 .carousel-shop__dots {
   display: none; }

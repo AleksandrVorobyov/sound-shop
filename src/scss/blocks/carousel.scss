@@ -125,6 +125,7 @@
   width: 350px !important;
   right: -40px;
   z-index: 50;
+  animation-play-state: paused;
 
   @media (min-width: 420px) {
     right: 0;
